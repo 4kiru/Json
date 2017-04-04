@@ -1,0 +1,160 @@
+{
+  "persons": [
+    {
+      "Name": "Xyz",
+      "Surname": "Tomek",
+      "Age": 20,
+      "gender": "Man",
+      "Phone": {
+        "landline": 888888888,
+        "mobile": 999999999
+      },
+      "Adress": {
+        "Street": "Widok",
+        "HomeNumber": 20,
+        "PostalCode": "31-560",
+        "City": "kraków"
+      },
+      "Interests": [
+        "Workout",
+        "skiing",
+        "soccer"
+      ],
+      "Family": {
+        "Spouse": {
+          "Name": "Xyz",
+          "Surname": "Zofia"
+        },
+        "Children": {
+          "1": [
+            {
+              "name": "Xyz",
+              "Surname": "janek",
+              "Gender": "man",
+              "Age": 7,
+              "interests": [
+                "sleeping",
+                "traveling"
+              ]
+            },
+            {
+              "name": "Xyz",
+              "Surname": "jania",
+              "Gender": "Woman",
+              "Age": 15,
+              "Interests": [
+                "Sailing",
+                "Dancing"
+              ]
+            }
+          ]
+        }
+      },
+      "Email": "tomek@gmail.com"
+    },
+    {
+      "Name": "Zxc",
+      "Surname": "Janusz",
+      "Age": 40,
+      "gender": "Man",
+      "Phone": {
+        "landline": 888888888,
+        "mobile": 999999999
+      },
+      "Adress": {
+        "Street": "januszów",
+        "HomeNumber": 105,
+        "PostalCode": "31-364",
+        "City": "Januszów podolskich"
+      },
+      "Interests": [
+        "Workout",
+        "skiing",
+        "soccer"
+      ],
+      "Family": {
+        "Spouse": {
+          "Name": "ZXC",
+          "Surname": "Janina"
+        },
+        "Children": {
+          "1": [
+            {
+              "name": "ZXC",
+              "Surname": "janek",
+              "Gender": "man",
+              "Age": 7,
+              "interests": [
+                "sleeping",
+                "traveling"
+              ]
+            },
+            {
+              "name": "ZXC",
+              "Surname": "jania",
+              "Gender": "Woman",
+              "Age": 15,
+              "Interests": [
+                "Sailing",
+                "Dancing"
+              ]
+            }
+          ]
+        }
+      },
+      "Email": "szwagier@gmail.com"
+    },
+    {
+      "Name": "Cxz",
+      "Surname": "Jarosław",
+      "Age": 50,
+      "gender": "Man",
+      "Phone": {
+        "landline": 888888888,
+        "mobile": 999999999
+      },
+      "Adress": {
+        "Street": "grzegórzecka",
+        "HomeNumber": 12,
+        "PostalCode": "46-560",
+        "City": "kraków"
+      },
+      "Interests": [
+        "Workout",
+        "skiing",
+        "soccer"
+      ],
+      "Family": {
+        "Spouse": {
+          "Name": "Cxz",
+          "Surname": "Renia"
+        },
+        "Children": {
+          "1": [
+            {
+              "name": "Cxz",
+              "Surname": "janek",
+              "Gender": "man",
+              "Age": 7,
+              "interests": [
+                "sleeping",
+                "traveling"
+              ]
+            },
+            {
+              "name": "Cxz",
+              "Surname": "danuta",
+              "Gender": "Woman",
+              "Age": 15,
+              "Interests": [
+                "Sailing",
+                "Dancing"
+              ]
+            }
+          ]
+        }
+      },
+      "Email": "jarek@gmail.com"
+    }
+  ]
+}

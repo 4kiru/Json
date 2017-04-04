@@ -1,0 +1,52 @@
+{
+  "Name": "Xyz",
+  "Surname": "Tomek",
+  "Age": 20,
+  "gender": "Man",
+  "Phone": {
+    "landline": 888888888,
+    "mobile": 999999999
+  },
+  "Adress": {
+    "Street": "Widok",
+    "HomeNumber": 20,
+    "PostalCode": "31-560",
+    "City": "kraków"
+  },
+  "Interests": [
+    "Workout",
+    "skiing",
+    "soccer"
+  ],
+  "Family": {
+    "Spouse": {
+      "Name": "Xyz",
+      "Surname": "Zofia"
+    },
+    "Children": {
+      "1": [
+        {
+          "name": "Xyz",
+          "Surname": "janek",
+          "Gender": "man",
+          "Age": 7,
+          "interests": [
+            "sleeping",
+            "traveling"
+          ]
+        },
+        {
+          "name": "Xyz",
+          "Surname": "jania",
+          "Gender": "Woman",
+          "Age": 15,
+          "Interests": [
+            "Sailing",
+            "Dancing"
+          ]
+        }
+      ]
+    }
+  },
+  "Email": "tomek@gmail.com"
+}
