@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+    <script>
+        jsonobj = {
+  "Name": "Xyz",
+  "Surname": "Tomek",
+  "Age": 20,
+  "gender": "Man",
+  "Phone": {
+    "landline": 888888888,
+    "mobile": 999999999
+  },
+  "Adress": {
+    "Street": "Widok",
+    "HomeNumber": 20,
+    "PostalCode": "31-560",
+    "City": "kraków"
+  },
+  "Interests": [
+    "Workout",
+    "skiing",
+    "soccer"
+  ],
+  "Family": {
+    "Spouse": {
+      "Name": "Xyz",
+      "Surname": "Zofia"
+    },
+    "Children": {
+      "1": [
+        {
+          "name": "Xyz",
+          "Surname": "janek",
+          "Gender": "man",
+          "Age": 7,
+          "interests": [
+            "sleeping",
+            "traveling"
+          ]
+        },
+        {
+          "name": "Xyz",
+          "Surname": "jania",
+          "Gender": "Woman",
+          "Age": 15,
+          "Interests": [
+            "Sailing",
+            "Dancing"
+          ]
+        }
+      ]
+    }
+  },
+  "Email": "tomek@gmail.com"
+}
+        
+        console.log(jsonobj);
+        let serializedobj = JSON.stringify(jsonobj);
+        localStorage.setItem('storedobj', serializedobj);
+    </script>
+</html>
