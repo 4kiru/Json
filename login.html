@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    Username: <br>
+    <input id="username" type="text" name="username" value="">
+    <br>
+    Password: <br>
+    <input id="password" type="text" name="password" value="">
+    <br><br>
+    <input onclick="program()" type="submit" value="Log in">
+  
+</body>
+    <script>
+       
+        
+        function program(){
+            var username = document.getElementById('username').value 
+            var password = document.getElementById('password').value
+            var usernamelocal = localStorage.getItem('username')
+            var passwordlocal = localStorage.getItem('password')
+        if (usernamelocal == null && passwordlocal == null){
+            username = document.getElementById('username').value
+            password = document.getElementById('password').value
+            localStorage.setItem('password', password)
+            localStorage.setItem('username', username)
+        }
+            else
+        {
+        if (usernamelocal == username && passwordlocal == password){
+           alert("zalogowales sie")
+        }
+        }
+        }
+    
+       
+    </script>
+</html>
