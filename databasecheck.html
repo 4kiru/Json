@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body onload="dbnumbers()">
+    
+</body>
+    <script>
+    function dbnumbers(){   
+        console.log(console.time(dbnumbers));
+     var db = openDatabase('number', '1.0', 'db for numbers to test', 2 * 1024 * 1024);
+        
+        db.transaction(function (tx) {
+       
+       
+        tx.executeSql('CREATE TABLE IF NOT EXISTS numbers (number)');
+        });
+        db.transaction(function(tx){
+          for (var i=0;i<1000; i++){
+            var e_number = Math.floor((Math.random() * 10) + 1);  
+            tx.executeSql('INSERT INTO numbers (number) VALUES (?)', [e_number]);
+        }  
+        });
+      console.log(console.timeEnd(dbnumbers));     
+      }   
+    </script>
+</html>

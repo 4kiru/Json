@@ -6,12 +6,15 @@
     <title></title>
 </head>
 
-<body>
+<body onload="dbcheck()">
     
 </body>
 <script>
-   var db = openDatabase('users', '1.0', 'userdb', 2 * 1024 * 1024);
-
+    
+function dbcheck(){    
+console.log(console.time(dbcheck));
+   var db = openDatabase('users', '1.0', 'userdb', 2 * 1024 * 1024);    
+    
 db.transaction(function (tx) {
    tx.executeSql('CREATE TABLE IF NOT EXISTS user (id unique, name, surname, age, username, email)');
    tx.executeSql('INSERT INTO user (id, name, surname, age, username, email) VALUES (1, "Beverly", "Bell", 35, "bbell0", "bbell0@storify.com")');
@@ -28,12 +31,14 @@ db.transaction(function (tx) {
                
 					
                for (i = 0; i < len; i++){
-                  var userdisplay = results.rows.item(i);
+                var userdisplay = results.rows.item(i);
                 console.log(userdisplay.id, userdisplay.name, userdisplay.surname, userdisplay.age, userdisplay.username, userdisplay.email)
                 console.log(userdisplay);
               
                }
             }, null);
          });
+ console.log(console.timeEnd(dbcheck));   
+}
 </script>
 </html>
