@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+</body>
+<script>
+   var db = openDatabase('users', '1.0', 'userdb', 2 * 1024 * 1024);
+
+db.transaction(function (tx) {
+   tx.executeSql('CREATE TABLE IF NOT EXISTS user (id unique, name, surname, age, username, email)');
+   tx.executeSql('INSERT INTO user (id, name, surname, age, username, email) VALUES (1, "Beverly", "Bell", 35, "bbell0", "bbell0@storify.com")');
+    tx.executeSql('INSERT INTO user (id, name, surname, age, username, email) VALUES (2, "Jane", "Fields", 35, "jfields1", "jfields1@privacy.com")');
+    tx.executeSql('INSERT INTO user (id, name, surname, age, username, email) VALUES (3, "Jane", "Simons", 25, "jsimons2", "jsimons2@discovery.com")');
+    tx.executeSql('INSERT INTO user (id, name, surname, age, username, email) VALUES (4, "Russel", "Garret", 35, "rgarret3", "rgarret@php.net")');
+    tx.executeSql('INSERT INTO user (id, name, surname, age, username, email) VALUES (5, "Liori", "Dixon", 35, "ldixon4", "ldixon4@myspace.com")');
+});
+        
+         db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM user', [], function (tx, results) {
+               var len = results.rows.length, i;
+                console.log("rows: "+len);
+               
+					
+               for (i = 0; i < len; i++){
+                  var userdisplay = results.rows.item(i);
+                console.log(userdisplay.id, userdisplay.name, userdisplay.surname, userdisplay.age, userdisplay.username, userdisplay.email)
+                console.log(userdisplay);
+              
+               }
+            }, null);
+         });
+</script>
+</html>
