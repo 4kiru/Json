@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body onload="randnumber()">
+    
+</body>
+    <script>
+       
+      
+    function randnumber(){
+        console.log(console.time(randnumber));
+        localStorage.clear();
+        for (var i=0 ; i<100000; i++)
+            {
+      var number = Math.floor((Math.random() * 10) + 1);  
+        localStorage.setItem("number"+i, number)
+        var count = 0
+        count = count + i;
+        console.log(count);
+            }
+        console.log(console.timeEnd(randnumber));
+    };    
+  
+    </script>
+</html>
